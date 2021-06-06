@@ -1,0 +1,22 @@
+@padding-md: 16px;
+.main {
+  background-color: #fff;
+  width: 240px;
+  min-height: 160px;
+}
+.messageItem {
+  display: flex;
+  padding: @padding-md;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  flex-direction: column;
+  &.unread {
+    background-color: #f6f6f6;
+  }
+  &:hover {
+    background-color: #eee;
+  }
+  .time {
+    color: #999;
+  }
+}

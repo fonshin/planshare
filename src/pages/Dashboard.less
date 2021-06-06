@@ -1,0 +1,27 @@
+@min-page-width: 1200px;
+@min-page-height: 700px;
+@padding-md: 16px;
+.page {
+  min-width: @min-page-width;
+  overflow: hidden;
+  position: relative;
+}
+.bgImage {
+  display: block;
+  width: 100%;
+  min-height: @min-page-height;
+}
+.messageBtn {
+  position: absolute;
+  right: @padding-md;
+  top: @padding-md;
+  .number {
+    position: relative;
+  }
+}
+.messageCenterContainer {
+  position: absolute;
+  right: @padding-md;
+  top: 50px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}

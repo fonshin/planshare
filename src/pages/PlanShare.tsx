@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PlanShare.css';
+import styles from './PlanShare.less';
 
 export default function Page() {
   return (
