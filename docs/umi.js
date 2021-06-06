@@ -22108,10 +22108,10 @@
     window.routerBase && (s.basename = window.routerBase);
     var f = Object({ NODE_ENV: 'production' }).__IS_SERVER
         ? null
-        : Object(l['a'])(s),
+        : Object(l['b'])(s),
       p = function () {
         var e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        return e || (f = Object(l['a'])(s)), f;
+        return e || (f = Object(l['b'])(s)), f;
       };
     function d(e) {
       if (Array.isArray(e)) return e;
