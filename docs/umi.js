@@ -49,7 +49,7 @@
     (n.o = function (e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (n.p = '/comment/'),
+    (n.p = '/planshare/'),
     n((n.s = 0));
 })({
   '+2a4': function (e, t, n) {
@@ -10395,13 +10395,13 @@
           }),
           Object(a['jsx'])('div', {
             children: Object(a['jsx'])(r['a'], {
-              to: '/planedit',
+              to: '/edit',
               children: 'planedit',
             }),
           }),
           Object(a['jsx'])('div', {
             children: Object(a['jsx'])(r['a'], {
-              to: '/planshare',
+              to: '/share',
               children: 'planshare',
             }),
           }),
@@ -22615,8 +22615,8 @@
       var e = [
         { path: '/', component: n('QeBL').default, exact: !0 },
         { path: '/dashboard', component: n('VD6m').default, exact: !0 },
-        { path: '/planedit', component: n('oDO4').default, exact: !0 },
-        { path: '/planshare', component: n('EZ5g').default, exact: !0 },
+        { path: '/edit', component: n('oDO4').default, exact: !0 },
+        { path: '/share', component: n('EZ5g').default, exact: !0 },
       ];
       return (
         a.applyPlugins({

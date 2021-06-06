@@ -8,12 +8,12 @@ export default function IndexPage() {
       <h1 className={styles.title}>Page index</h1>
       <div>
         <Link to="/dashboard">Dashboard</Link>
-        </div>
-      <div>
-        <Link to="/planedit">planedit</Link>
       </div>
       <div>
-        <Link to="/planshare">planshare</Link>
+        <Link to="/edit">planedit</Link>
+      </div>
+      <div>
+        <Link to="/share">planshare</Link>
       </div>
     </div>
   );

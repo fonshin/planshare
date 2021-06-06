@@ -7,10 +7,10 @@ export default defineConfig({
   routes: [
     { path: '/', component: '@/pages/index' },
     { path: '/dashboard', component: '@/pages/Dashboard' },
-    { path: '/planedit', component: '@/pages/PlanEdit' },
-    { path: '/planshare', component: '@/pages/PlanShare' },
+    { path: '/edit', component: '@/pages/PlanEdit' },
+    { path: '/share', component: '@/pages/PlanShare' },
   ],
   fastRefresh: {},
   outputPath: 'docs',
-  publicPath: process.env.NODE_ENV === 'production' ? '/comment/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/planshare/' : '/',
 });
