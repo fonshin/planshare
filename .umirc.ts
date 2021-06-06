@@ -12,5 +12,8 @@ export default defineConfig({
   ],
   fastRefresh: {},
   outputPath: 'docs',
-  publicPath: process.env.NODE_ENV === 'production' ? '/planshare/' : '/',
+  publicPath:
+    process.env.NODE_ENV === 'production'
+      ? 'https://fonshin.github.io/planshare/'
+      : '/',
 });
