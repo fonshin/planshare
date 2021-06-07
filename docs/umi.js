@@ -30203,7 +30203,7 @@
                 ],
               }),
               Object(h['jsx'])(a['a'], {
-                className: O()(j.a.messageBtn, { [j.a.visible]: p }),
+                className: O()(j.a.rightButtons, { [j.a.visible]: p }),
                 onClick: () => w(!p),
                 children: Object(h['jsx'])(m['a'], {}),
               }),

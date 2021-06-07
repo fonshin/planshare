@@ -151,7 +151,7 @@ export default function Page() {
           )}
         </div>
         <Button
-          className={classNames(styles.messageBtn, {
+          className={classNames(styles.rightButtons, {
             [styles.visible]: commentListVisible,
           })}
           onClick={() => setCommentListVisible(!commentListVisible)}
