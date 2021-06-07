@@ -1,3 +1,117 @@
-.title {
-  background: rgb(242, 225, 121);
+@min-page-width: 1200px;
+@min-page-height: 700px;
+@padding-md: 16px;
+@padding-sm: 8px;
+@comment-width: 300px;
+.page {
+  min-width: @min-page-width;
+  overflow: hidden;
+  position: relative;
+}
+.bgImage {
+  display: block;
+  width: 100%;
+  min-height: @min-page-height;
+}
+.rightButtons {
+  position: absolute;
+  right: @padding-md;
+  top: @padding-sm;
+  transition: right 0.45s;
+  &.visible {
+    right: calc(@comment-width + @padding-md);
+    color: blue;
+  }
+  .number {
+    position: relative;
+  }
+}
+.commentListContainer {
+  position: absolute;
+  right: -100%;
+  width: @comment-width;
+  top: 0;
+  height: 100vh;
+  background-color: #fff;
+  transition: right 0.35s;
+  &.visible {
+    right: 0;
+  }
+}
+.rendererContainer {
+  position: relative;
+  &.adding {
+    cursor: cell;
+  }
+}
+.commentTag {
+  position: absolute;
+  z-index: 1;
+  color: #fff;
+  background-color: cornflowerblue;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.35s ease-out;
+  &:hover {
+    background-color: lighten(cornflowerblue, 10%);
+    transform: scale(1.2);
+  }
+  &.active {
+    background-color: darken(cornflowerblue, 20%);
+    transform: scale(1.2);
+  }
+  &.hidden {
+    display: none;
+  }
+}
+
+.actionBtn {
+  cursor: pointer;
+  &:hover {
+    background-color: #eee;
+  }
+}
+.activeComment {
+  display: flex;
+  padding: @padding-md;
+  cursor: pointer;
+  flex-direction: column;
+  .time,
+  .tip {
+    color: #999;
+  }
+  .content {
+    color: #666;
+  }
+  .active {
+    color: blue;
+  }
+  .owner {
+    display: flex;
+    color: #333;
+    .tip {
+      padding-left: @padding-sm;
+    }
+  }
+  .name {
+    padding: 0 @padding-sm;
+    color: #333;
+  }
+  .moreBtn {
+    margin-left: @padding-sm;
+  }
+  :global {
+    .ant-divider-horizontal {
+      margin: @padding-md 0 0 0;
+    }
+  }
+}
+.rightButtons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }

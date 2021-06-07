@@ -83,7 +83,7 @@ export default function Page() {
 
   const addComment = useCallback(() => {
     setAddCommentVisible(false);
-    const newComment = {
+    const newComment: PlanComment = {
       text: commentText,
       time: '2020/01/01 11:11',
       replies: [],
@@ -91,9 +91,12 @@ export default function Page() {
       nickname: 'fon',
       planName: '深圳湾0号',
       isRead: true,
+      uuid: '22',
+      positionLeft: 600,
+      positionTop: 300,
     };
-
     setCommentList([newComment, ...commentList]);
+    setCommentText('');
   }, [commentText, commentList]);
 
   const [activeComment, setActiveComment] = useState<PlanComment>();
@@ -181,6 +184,8 @@ export default function Page() {
           showCount
           value={commentText}
           onChange={(e) => setCommentText(e.target.value)}
+          onPressEnter={addComment}
+          autoFocus
         ></Input.TextArea>
       </Modal>
 
@@ -199,15 +204,11 @@ export default function Page() {
             <div className={styles.icon}>
               <div className={styles.rightButtons}>
                 {activeComment.resolved ? (
-                  <Tooltip title="取消已解决">
-                    <CheckCircleOutlined
-                      className={classNames(styles.active, styles.actionBtn)}
-                    />
-                  </Tooltip>
+                  <CheckCircleOutlined
+                    className={classNames(styles.active, styles.actionBtn)}
+                  />
                 ) : (
-                  <Tooltip title="标记为已解决">
-                    <InfoCircleOutlined className={styles.actionBtn} />
-                  </Tooltip>
+                  <InfoCircleOutlined className={styles.actionBtn} />
                 )}
               </div>
               <div className={styles.content}>
@@ -239,6 +240,7 @@ export default function Page() {
             showCount
             value={replyText}
             onChange={(e) => setReplyText(e.target.value)}
+            onPressEnter={replyComment}
           ></Input.TextArea>
         </div>
       </Modal>
