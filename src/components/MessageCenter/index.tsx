@@ -11,12 +11,13 @@ interface Props {
 export default function MessageCenter({ messages }: Props) {
   const history = useHistory();
   const clickMessageHandler = useCallback(() => {
-    history.push('/edit');
+    history.push('/edit?commentid=2');
   }, [history]);
   return (
     <div className={styles.main}>
       {messages.map((item) => (
         <div
+          key={item.uuid}
           className={classNames(styles.messageItem, {
             [styles.unread]: !item.isRead,
           })}

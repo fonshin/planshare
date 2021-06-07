@@ -1,0 +1,41 @@
+@padding-md: 16px;
+@padding-sm: 8px;
+.main {
+}
+.header {
+  padding: @padding-md;
+  display: flex;
+  justify-content: space-between;
+}
+.messageItem {
+  display: flex;
+  padding: @padding-md;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  flex-direction: column;
+  &.unread {
+    background-color: #f6f6f6;
+  }
+  &:hover,
+  &.active {
+    background-color: #eee;
+  }
+  .time,
+  .tip {
+    color: #999;
+  }
+  .content {
+    display: flex;
+    color: #666;
+  }
+  .text {
+    padding-left: @padding-sm;
+  }
+  .active {
+    color: blue;
+  }
+  .name {
+    padding-right: @padding-sm;
+    color: #333;
+  }
+}

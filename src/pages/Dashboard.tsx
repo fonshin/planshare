@@ -43,7 +43,6 @@ export default function Page() {
       </Button>
       {messageCenterVisible && (
         <div className={styles.messageCenterContainer}>
-          {' '}
           <MessageCenter messages={MessageList} />
         </div>
       )}
